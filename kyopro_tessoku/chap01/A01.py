@@ -7,7 +7,7 @@ _INPUT = """\
 
 sys.stdin = io.StringIO(_INPUT)
 
-
+# 計算量: O(1)
 if __name__ == "__main__":
     input_n = int(input())
     print(input_n**2)
