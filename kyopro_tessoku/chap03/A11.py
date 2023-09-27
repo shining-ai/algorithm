@@ -2,13 +2,14 @@ import io
 import math
 import sys
 
-# def debug_input():
-#     _INPUT = """\
-#     3 5
-#     1 2 5
-#     """
 
-#     sys.stdin = io.StringIO(_INPUT)
+def debug_input():
+    _INPUT = """\
+    3 5
+    1 2 5
+    """
+
+    sys.stdin = io.StringIO(_INPUT)
 
 
 # 計算量: O(XY+N)
