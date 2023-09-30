@@ -11,7 +11,7 @@ def debug_input():
     sys.stdin = io.StringIO(_INPUT)
 
 
-# 計算量: O(N+log10^9)
+# 計算量: O(N)
 def main():
     N, K = map(int, input().split())
     A = list(map(int, input().split()))
