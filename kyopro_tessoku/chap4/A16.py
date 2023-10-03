@@ -30,7 +30,6 @@ def main():
     print(arrive_time[-1])
 
 
-
 if __name__ == "__main__":
     # debug_input()
     main()
