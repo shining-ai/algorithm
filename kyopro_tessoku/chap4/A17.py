@@ -44,6 +44,7 @@ def main():
         print(route[i], end=" ")
     print(route[-1])
 
+
 if __name__ == "__main__":
     # debug_input()
     main()
