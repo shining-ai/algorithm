@@ -32,7 +32,6 @@ def main():
     print(dp[N])
 
 
-
 if __name__ == "__main__":
     # debug_input()
     main()
