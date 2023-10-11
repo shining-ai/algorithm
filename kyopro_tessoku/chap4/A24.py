@@ -1,3 +1,4 @@
+import bisect
 import io
 import sys
 
@@ -13,21 +14,28 @@ def debug_input():
 
 # 計算量: O(2N)
 def main():
-
     N = int(input())
     A = list(map(int, input().split()))
 
-    dp = [0] * (N + 1)
-    dp[0] = 1
+    ans = 0
+    L = []
+    dp = [0] * N
 
     # 動的計画法
-    for i in range(1, N):
-        for j in range(i):
-            if A[j] < A[i]:
-                dp[i] = max(dp[i], dp[j] + 1)
+    for i in range(N):
+        pos = bisect.bisect_left(L, A[i])
+        dp[i] = pos
 
-    print(max(dp))
+        # 配列 L を更新
+        if dp[i] >= ans:
+            L.append(A[i])
+            ans += 1
+        else:
+            L[dp[i]] = A[i]
+
+    print(ans)
+
 
 if __name__ == "__main__":
-    # debug_input()
+    debug_input()
     main()
