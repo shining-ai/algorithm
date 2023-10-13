@@ -4,11 +4,11 @@ import sys
 
 def debug_input():
     _INPUT = """\
-4
-17
-31
-35
-49
+    4
+    17
+    31
+    35
+    49
     """
 
     sys.stdin = io.StringIO(_INPUT)
@@ -35,6 +35,7 @@ def main():
             print("Yes")
         else:
             print("No")
+
 
 if __name__ == "__main__":
     # debug_input()
