@@ -21,7 +21,7 @@ def main():
         wari = 2**i
         if b // wari % 2 == 1:
             ans = ans * p % m
-        p = p*p % m
+        p = p * p % m
 
     print(ans)
 
