@@ -21,7 +21,7 @@ def main():
             dp[i] = False
         elif not dp[i - A]:
             dp[i] = True
-        elif i >= B and dp[i - B] == False:
+        elif i >= B and not dp[i - B]:
             dp[i] = True
         else:
             dp[i] = False
