@@ -4,7 +4,7 @@
 https://www.amazon.co.jp/dp/483997750X
 
 
-![image](https://github.com/shining-ai/algorithm/assets/132378321/0116d729-1e16-46a4-9a73-690afdbeee67)
+<img width="200" alt="SCR-20230502-nedr" src=https://github.com/shining-ai/algorithm/assets/132378321/0116d729-1e16-46a4-9a73-690afdbeee67>
 
 
 ## 解答
