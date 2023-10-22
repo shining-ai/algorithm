@@ -25,9 +25,9 @@ def main():
         if i - Y >= 0:
             Transit[groudy[i - Y]] = True
 
-        if Transit[0] == False:
+        if not Transit[0]:
             groudy[i] = 0
-        elif Transit[1] == False:
+        elif not Transit[1]:
             groudy[i] = 1
         else:
             groudy[i] = 2
