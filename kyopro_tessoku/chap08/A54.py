@@ -11,6 +11,7 @@ def debug_input():
     """
     sys.stdin = io.StringIO(_INPUT)
 
+
 # 連想配列(辞書型)
 def main():
     Q = int(input())
