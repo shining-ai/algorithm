@@ -13,6 +13,11 @@ def debug_input():
     """
     sys.stdin = io.StringIO(_INPUT)
 
+def update():
+    return
+
+def show_max():
+    return
 
 # O
 def main():
@@ -29,6 +34,12 @@ def main():
 
     for _ in range(Q):
         Query, X, Y = map(int, input().split())
+        if Query == 1:
+            update()
+        elif Query == 2:
+            show_max()
+                
+    
         
 
 
