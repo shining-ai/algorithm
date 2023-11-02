@@ -4,45 +4,54 @@ import sys
 
 def debug_input():
     _INPUT = """\
-    7 4
-2 4 1 7 6 5 3
-1 1
-1 5
-2 13
-5 999999999
+    8 4
+    1 3 16
+    2 4 7
+    1 5 13
+    2 4 7
     """
     sys.stdin = io.StringIO(_INPUT)
 
-def update():
-    return
 
-def show_max():
-    return
+def update(RMQ, pos, x, size):
+    RMQ[pos + size] = x
+    while pos > 0:
+        RMQ[pos] = max(RMQ[pos * 2], RMQ[pos * 2 + 1])
+        pos //= 2
+
+    return RMQ
+
+
+def show_max(RMQ, L, R, a, b, u):
+    if R <= a or b <= 1:
+        return -1000000000
+    if L <= a and b <= R:
+        return RMQ[u]
+
+    m = (a + b) // 2
+    answerl = show_max(RMQ, L, R, a, m, u * 2)
+    answerr = show_max(RMQ, L, R, m, b, u * 2 + 1)
+    return max(answerl, answerr)
+
 
 # O
 def main():
     N, Q = map(int, input().split())
-    A = list(map(int, input().split()))
 
-    LEVELS = 30
-    dp = [[None] * N for i in range(LEVELS)]
-    for i in range(0, N):
-        dp[0][i] = A[i] - 1
-    for d in range(1, LEVELS):
-        for i in range(0, N):
-            dp[d][i] = dp[d - 1][dp[d - 1][i]]
+    size = 1
+    while size < N:
+        size *= 2
+    RMQ = [0] * (2 * size)
 
     for _ in range(Q):
-        Query, X, Y = map(int, input().split())
+        Query, L, R = map(int, input().split())
         if Query == 1:
-            update()
+            RMQ = update(RMQ, L, R, size)
         elif Query == 2:
-            show_max()
-                
-    
-        
+            answer = show_max(RMQ, L - 1, R - 1, 0, size, 1)
+            print(answer)
 
 
 if __name__ == "__main__":
-    # debug_input()
+    debug_input()
     main()
