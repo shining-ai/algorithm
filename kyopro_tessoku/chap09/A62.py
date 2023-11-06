@@ -1,12 +1,19 @@
 import io
 import sys
 
+# 再帰呼び出しの深さの上限を 120000 に設定
+sys.setrecursionlimit(120000)
+
 
 def debug_input():
     _INPUT = """\
-3 2
-1 3
+6 6
+1 4
 2 3
+3 4
+5 6
+1 2
+2 4
     """
     sys.stdin = io.StringIO(_INPUT)
 
