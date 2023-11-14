@@ -1,5 +1,9 @@
 # 動的計画法の問題演習
 
+参考
+https://qiita.com/c-yan/items/56a051d826b873b4f78d
+
+
 * Educational DP Contest / DP まとめコンテスト
 * Typical DP Contest
 * ABC011C - 123引き算
