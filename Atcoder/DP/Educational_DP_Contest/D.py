@@ -31,7 +31,7 @@ def main():
                 if i_weight + w <= W:
                     dp[i_goods][i_weight + w] = max(
                         dp[i_goods - 1][i_weight] + v,
-                         dp[i_goods][i_weight + w],
+                        dp[i_goods][i_weight + w],
                     )
 
     print(max(dp[N]))
