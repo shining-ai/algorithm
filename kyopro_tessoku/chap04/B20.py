@@ -12,6 +12,7 @@ programming
     sys.stdin = io.StringIO(_INPUT)
 
 
+# 編集距離（レーベンシュタイン距離）
 # 計算量: O(ST)
 def main():
     S = input()
