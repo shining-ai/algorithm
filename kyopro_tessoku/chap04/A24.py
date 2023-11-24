@@ -37,5 +37,5 @@ def main():
 
 
 if __name__ == "__main__":
-    debug_input()
+    # debug_input()
     main()
