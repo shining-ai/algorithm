@@ -17,21 +17,21 @@ def main():
     N = int(input())
     A = list(map(int, input().split()))
 
+    A.insert(0, 0)
     ans = 0
-    L = []
-    dp = [0] * N
+    L = [0]
+    dp = [0] * (N + 1)
 
     # 動的計画法
-    for i in range(N):
-        pos = bisect.bisect_left(L, A[i])
-        dp[i] = pos
+    for i in range(1, N + 1):
+        combo = bisect.bisect_left(L, A[i])
+        dp[i] = combo
 
-        # 配列 L を更新
-        if dp[i] >= ans:
+        if combo > ans:
             L.append(A[i])
-            ans += 1
+            ans = combo
         else:
-            L[dp[i]] = A[i]
+            L[combo] = min(L[combo], A[i])
 
     print(ans)
 
