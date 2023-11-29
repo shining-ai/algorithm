@@ -1,4 +1,4 @@
-# algorithm
+# kyopro
 
 ## 競技プログラミングの問題
 * [AIZU ONLINE JUDGE](https://onlinejudge.u-aizu.ac.jp/challenges/search/categories)
